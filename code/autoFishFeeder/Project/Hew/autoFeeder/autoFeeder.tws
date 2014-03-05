@@ -7,19 +7,7 @@
 [GENERAL_DATA]
 [BREAKPOINTS]
 [OPEN_WORKSPACE_FILES]
-"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\source\app\main.c" 
-"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\source\drv\drv_oled.c" 
-"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\source\drv\intprg.c" 
-"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\source\drv\resetprg.c" 
-"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\source\interface\if_oled_text.c" 
-"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\source\interface\if_serial_flash.c" 
 [WORKSPACE_FILE_STATES]
-"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\source\app\main.c" 0 0 924 166 0 0 
-"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\source\drv\drv_oled.c" -8 -30 1019 283 1 5 
-"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\source\drv\intprg.c" 50 50 928 170 0 2 
-"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\source\drv\resetprg.c" 0 0 928 170 0 4 
-"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\source\interface\if_oled_text.c" 25 25 928 170 0 1 
-"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\source\interface\if_serial_flash.c" 75 75 928 170 0 3 
 [LOADED_PROJECTS]
 "autoFeeder" 
 [END]
