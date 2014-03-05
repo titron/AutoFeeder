@@ -95,6 +95,17 @@ u32 vsysFeedHour = SYS_FEED_TIME_HOUR;
 u32 vsysFeedMinute = SYS_FEED_TIME_MINUTE;
 u32 vsysFeedSecond = SYS_FEED_TIME_SECOND;
 
+/*****************************************************************************
+ * ID                : 1.0
+ * Outline           : check feeding time
+ * Include           : none
+ * Declaration       : u8 sys_IsFeedingTime(void)
+ * Description       : if should feed return TRUE
+ *                   : if not feed time return FALSE
+ * Argument          : void
+ * Return Value      : void
+ * Calling Functions : none
+ *****************************************************************************/
 u8 sys_IsFeedingTime(void)
 {
 	if((vsysFeedHour == vsysHour) &&
