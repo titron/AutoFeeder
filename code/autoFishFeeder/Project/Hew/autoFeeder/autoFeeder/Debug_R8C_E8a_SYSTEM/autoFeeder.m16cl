@@ -1,0 +1,24 @@
+-L "r8clib"
+-G
+-MS
+-O "D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\autoFeeder.x30"
+-ORDER data_SE=0400,bss_SE,data_SO,bss_SO,data_NE,bss_NE,data_NO,bss_NO,stack,istack,heap_NE,rom_NE=04000,rom_NO,data_SEI,data_SOI,data_NEI,data_NOI,switch_table,program,interrupt,vector=0FEDC
+-R8C
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\draw_task.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\draw_test.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\drv_clk.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\drv_int.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\drv_key.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\drv_led.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\drv_oled.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\drv_pwr.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\drv_tmr0.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\drv_wdt.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\fvector.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\heap.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\if_disp.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\if_key.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\initsct.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\intprg.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\main.r30"
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug_R8C_E8a_SYSTEM\resetprg.r30"

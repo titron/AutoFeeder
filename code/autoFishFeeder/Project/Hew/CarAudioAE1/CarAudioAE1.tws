@@ -1,0 +1,19 @@
+[HIMDBVersion]
+2.0
+[DATABASE_VERSION]
+"1.2" 
+[CURRENT_PROJECT]
+"CarAudioAE1" 
+[GENERAL_DATA]
+[BREAKPOINTS]
+[OPEN_WORKSPACE_FILES]
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Source\System\app_ae1.c" 
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Source\System\app_evolume.c" 
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Source\System\draw\disp_widget.c" 
+[WORKSPACE_FILE_STATES]
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Source\System\app_ae1.c" 25 25 960 211 0 1 
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Source\System\app_evolume.c" -8 -30 1076 349 1 2 
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Source\System\draw\disp_widget.c" 0 0 956 207 0 0 
+[LOADED_PROJECTS]
+"CarAudioAE1" 
+[END]

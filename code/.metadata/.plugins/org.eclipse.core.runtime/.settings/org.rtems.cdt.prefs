@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+org.rtems.cdt.basePath=C\:\\opt\\rtems-4.9
+org.rtems.cdt.bspPath=C\:\\MinGW\\share\\libtool
+org.rtems.cdt.mingwPath=C\:\\MinGW
+org.rtems.cdt.msysPath=C\:\\MinGW\\msys\\1.0

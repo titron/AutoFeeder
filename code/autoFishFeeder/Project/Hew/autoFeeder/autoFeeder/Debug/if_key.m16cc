@@ -1,0 +1,9 @@
+-I"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\app"
+-I"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\drv"
+-I"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\interface"
+-I"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\app\draw"
+-c
+-finfo
+-dir "D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug"
+-R8C
+"D:\My files\DIY\autoFishFeeder\AutoFeeder\code\autoFishFeeder\source\interface\if_key.c"

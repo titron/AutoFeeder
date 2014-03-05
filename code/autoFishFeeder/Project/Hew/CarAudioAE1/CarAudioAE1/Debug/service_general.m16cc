@@ -1,0 +1,12 @@
+-I"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\CarAudioAE1\CarAudioAE1\..\..\..\..\Source\Drive\Common"
+-I"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\CarAudioAE1\CarAudioAE1\..\..\..\..\Source\Drive\R8C"
+-I"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\CarAudioAE1\CarAudioAE1\..\..\..\..\Source\Interface"
+-I"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\CarAudioAE1\CarAudioAE1\..\..\..\..\Source\System"
+-I"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\CarAudioAE1\CarAudioAE1\..\..\..\..\Source\System\draw"
+-c
+-finfo
+-dir "D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Project\Hew\CarAudioAE1\CarAudioAE1\Debug"
+-OR
+-fNROM
+-R8CE
+"D:\My files\DIY\autoFishFeeder\code\autoFishFeeder\Source\System\service_general.c"

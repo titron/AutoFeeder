@@ -1,0 +1,5 @@
+Project name : CarAudioAE1
+
+5.45.00 of Renesas M16C Standard Toolchain was upgraded to
+    5.45.01 of Renesas M16C Standard Toolchain.
+
