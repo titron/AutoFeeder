@@ -39,13 +39,10 @@
 #define BOTTOM_LINE_FILL_GRAY       	2U
 #define BOTTOM_LINE_BOX_FILL_GRAY   	8U
 
-#define POS_OFFSET						(U16)16
-#define POS_PLAY_TIME_X					(U16)100
-#define POS_PLAY_TIME_Y					(U16)48
-#define POS_PLAY_TIME_PLAYBACK_X		POS_PLAY_TIME_X
-#define POS_PLAY_TIME_LINE_X			(POS_PLAY_TIME_X+(U16)40-POS_OFFSET)
-#define POS_PLAY_TIME_LINE_WIDTH		(U16)100
-#define POS_PLAY_TIME_FILE_X			(POS_PLAY_TIME_X+POS_PLAY_TIME_LINE_WIDTH+(U16)40+(U16)8)
+#define CURRENT_TIME_POS_X              (U16)208
+#define CURRENT_TIME_POS_Y              (U16)0
+#define FEED_TIME_POS_X		            (U16)80
+#define FEED_TIME_POS_Y		            (U16)32
 
 #define FISH_BMP_POS_X 					0
 #define FISH_BMP_POS_Y 					30
@@ -213,20 +210,21 @@ void updateTimerPaint(U8 mode)
 	U8 buf[10];
 	U16 second, minute, hour;
 	U16 offset;
-	/*draw total time*/
+
+	/*draw current time*/
 	hour = (U16) vsysHour;
 	minute = (U16) vsysMinute;
 	second = (U16) vsysSecond;
 	memset(buf, 0, sizeof(buf));
 	Strformat3(buf, hour, minute, second, ":", (U8) 2);
-	OLED_TextA(buf, POS_PLAY_TIME_PLAYBACK_X, POS_PLAY_TIME_Y, FONT16);
-	/*draw playback time*/
+	OLED_TextA(buf, CURRENT_TIME_POS_X, CURRENT_TIME_POS_Y, FONT16);
+	/*draw feeding time*/
 	hour = (U16) vsysFeedHour;
 	minute = (U16) vsysFeedMinute;
 	second = (U16) vsysFeedSecond;
 	memset(buf, 0, sizeof(buf));
 	Strformat3(buf, hour, minute, second, ":", (U8) 2);
-	OLED_TextA(buf, POS_PLAY_TIME_PLAYBACK_X, POS_PLAY_TIME_Y - 16, FONT16);
+	OLED_TextA(buf, FEED_TIME_POS_X, FEED_TIME_POS_Y, FONT16);
 }
 
 /*
@@ -252,6 +250,7 @@ void App_Task_Disp(void)
 			if_Disp_SetStartLine(DISP_SCREEN_START_LINE);
 
 			OLED_TextA(DispName, ORIGNAL_POS_X, ORIGNAL_POS_Y, FONT16);
+			updateTimerPaint(REDRAW);
 			OLED_DrawBox(BOTTOM_LINE_START_X,
 			BOTTOM_LINE_START_Y,
 			BOTTOM_LINE_END_X,
@@ -259,7 +258,6 @@ void App_Task_Disp(void)
 			BOTTOM_LINE_FILL,
 			BOTTOM_LINE_FILL_GRAY,
 			BOTTOM_LINE_BOX_FILL_GRAY);
-			updateTimerPaint(REDRAW);
 			OLED_DrawBmp(FISH_BMP_POS_X, FISH_BMP_POS_Y, BMP_FISH_NO);
 			DispState = DISP_PLAY;
 		}
