@@ -24,8 +24,6 @@
 #include "cstartdef.h"
 #include "drv_iic.h"
 #include "drv_tmr0.h"
-////#include "driver_int.h"
-////#include "driver_csi0.h"
 // When you want to use BANK1 registers
 // please define interrupt using /B swtich as follows.
 //

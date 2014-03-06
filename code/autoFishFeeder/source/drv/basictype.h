@@ -1,52 +1,20 @@
-/******************************************************************************
-* DISCLAIMER
-*
-* This software is supplied by Renesas Electronics Corporation and is only
-* intended for use with Renesas products. No other uses are authorized.
-* This software is owned by Renesas Electronics Corporation and is protected under
-* all applicable laws, including copyright laws.
-*
-* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES
-* REGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY,
-* INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
-* PARTICULAR PURPOSE AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY
-* DISCLAIMED.
-*
-* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS
-* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE
-* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES
-* FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS
-* AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-*
-* Renesas reserves the right, without notice, to make changes to this
-* software and to discontinue the availability of this software.
-* By using this software, you agree to the additional terms and
-* conditions found by accessing the following link:
-* http://www.renesas.com/disclaimer
-*******************************************************************************/
-/* Copyright (C) 2010 Renesas Electronics Corporation. All rights reserved. */
-/******************************************************************************
-* System Name	: AE1-LF Car Audio Demo
-* File Name 	: basictype.h
-* Abstract 		: 
-* Version 		: Ver 0.10
-* Device 		: 
-* Tool-Chain 	: High-performance Embedded Workshop (Version 4.08.00.011)
-* 				: C Compiler Package for M16C Series M3T-NC30WA(V.5.45 Release 00)
-* OS 			: None
-* H/W Platform 	: AE1-LF demo board
-* Description 	: Basic type definition of the whole S/W
-* Operation 	: 
-* Limitation 	: 
-* 				:
-*******************************************************************************
-* History 		: Dec.16,2010 Ver. 0.10 First Release
-* 				:
-*******************************************************************************/
-
+/*
+ * basictype.h
+ *
+ *  Created on: 3/6/2014
+ *      Author: titron
+ *       email: hawkdtw@gmail.com
+ */
 #ifndef _BASIC_TYPE_H
 #define _BASIC_TYPE_H
 
+/*
+ * Includes
+ */
+
+/*
+ * Typedef
+ */
 typedef unsigned char U8;
 typedef signed char S8;
 typedef unsigned short U16;
@@ -176,7 +144,23 @@ typedef volatile struct
 	VU16 high;
 } word2_type;
 
-/********** macro define (COMMON) ********************************************/
+/* Standard Return value define */
+typedef U8 Std_ReturnType;
+typedef U8 StdRetType;
+
+/************************* Additional TYPEDEF **********************************/
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned long u32;
+typedef unsigned long long u64;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed long s32;
+typedef signed long long s64;
+
+/*
+ * Macro
+ */
 #define YES                         (U8)1
 #define NO                          (U8)0
 #define TRUE                        (U8)1
@@ -191,10 +175,6 @@ typedef volatile struct
 #define NONE						(U8)0xFF
 #define PULL_UP						(U8)1
 #define PULL_DOWN					(U8)0
-
-/* Standard Return value define */
-typedef U8 Std_ReturnType;
-typedef U8 StdRetType;
 
 #define	DONE						(U8)0
 #define	ERROR1						(U8)1
@@ -213,16 +193,17 @@ typedef U8 StdRetType;
 #define	ERROR14						(U8)14
 #define	ERROR15						(U8)15
 
-/************************* Additional TYPEDEF **********************************/
-typedef unsigned char u8;
-typedef unsigned short u16;
-typedef unsigned long u32;
-typedef unsigned long long u64;
-typedef signed char s8;
-typedef signed short s16;
-typedef signed long s32;
-typedef signed long long s64;
+/*
+ * Imported global variables and functions (from other files)
+ */
+
+/*
+ * Exported global variables and functions (to be accessed by other files)
+ */
+
+/*
+ * Private variables and functions
+ */
 
 #endif /* _BASIC_TYPE_H */
-
 /* End of file */

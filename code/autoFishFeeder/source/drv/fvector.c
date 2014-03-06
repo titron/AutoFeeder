@@ -27,8 +27,6 @@
 
 #pragma sectaddress     fvector,ROMDATA 0xffdc
                                                                                 
-//////////////////////////////////////////////////////////////////////////
-                                                                                
 #pragma interrupt/v _dummy_int  //udi
 #pragma interrupt/v _dummy_int  //over_flow
 #pragma interrupt/v _dummy_int  //brki
@@ -50,6 +48,4 @@ _asm("	.id	""\"#FFFFFFFFFFFFFF\"");
 #pragma interrupt _dummy_int()
 void _dummy_int(void);
 void _dummy_int(void){}
-                                                                                
-
-
+/* End of file */

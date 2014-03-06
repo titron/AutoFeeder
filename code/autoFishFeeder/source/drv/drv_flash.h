@@ -1,55 +1,19 @@
-/*****************************************************************************
- * DISCLAIMER
+/*
+ * drv_flash.h
  *
- * This software is supplied by Renesas Electronics Corporation and is only
- * intended for use with Renesas products. No other uses are authorized.
- * This software is owned by Renesas Electronics Corporation and is protected
- * under all applicable laws, including copyright laws.
- *
- * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES
- * REGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
- * PARTICULAR PURPOSE AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY
- * DISCLAIMED.
- *
- * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS
- * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE
- * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES
- * FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS
- * AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
- *
- * Renesas reserves the right, without notice, to make changes to this
- * software and to discontinue the availability of this software.
- * By using this software, you agree to the additional terms and
- * conditions found by accessing the following link:
- * http://www.renesas.com/disclaimer
- *****************************************************************************/
-/* Copyright (C) 2010 Renesas Electronics Corporation. All rights reserved.  */
-/*****************************************************************************
- * System Name  : AE1-LF Car Audio Demo
- * File Name    : driver_flash.h
- * Abstract     : driver of serial flash
- * Version      : 1.00
- * Device       : R8C/2A group, or R8C/2B group
- * Tool-Chain   : High-performance Embedded Workshop (Version 4.08.00.011)
- *              : Renesas M16C Standard Toolchain (V5.45.01)
- * OS           : none
- * H/W Platform : AE1-LF demo board
- * Description  : This is driver of flash.
- * Operation    : none
- * Limitation   : This file can be only used as sample code for AE1-LF.
- *****************************************************************************
- * History      : May.15,2011 Ver. 1.00 First Release
- *****************************************************************************/
+ *  Created on: 3/6/2014
+ *      Author: titron
+ *       email: hawkdtw@gmail.com
+ */
 #ifndef __IF_SERIAL_FLASH_H__
 #define __IF_SERIAL_FLASH_H__
-/*****************************************************************************
- Includes   <System Includes> , "Project Includes"
- *****************************************************************************/
+/*
+ * Includes
+ */
 
-/*****************************************************************************
- Typedef definitions
- *****************************************************************************/
+/*
+ * Typedef
+ */
 typedef struct
 {
 	U8 U8OperationCode;
@@ -57,14 +21,14 @@ typedef struct
 	U8 U8AddMid;
 	U8 U8AddLow;
 	U8 U8Dummy1;
-} StrFlsCmdReadArray2;				/* Read Commands - Read Array: 0BH */
+} StrFlsCmdReadArray2; /* Read Commands - Read Array: 0BH */
 
 /* Note: The erasing of the device is internally self-timed and should take place in a
  *       time of tCHPE. tCHPE = 16 seconds(Typical value)*/
 typedef struct
 {
 	U8 U8OperationCode;
-} StrFlsCmdEraseChip;				/* Erase Commands - Chip Erase: 60H or C7H*/
+} StrFlsCmdEraseChip; /* Erase Commands - Chip Erase: 60H or C7H*/
 
 typedef struct
 {
@@ -72,25 +36,17 @@ typedef struct
 	U8 U8AddHigh;
 	U8 U8AddMid;
 	U8 U8AddLow;
-} StrFlsCmdProgramBytePage;			/* Program Commands - Byte/Page Program: 02H*/
+} StrFlsCmdProgramBytePage; /* Program Commands - Byte/Page Program: 02H*/
 
 typedef struct
 {
 	U8 U8OperationCode;
-} StrFlsCmdWriteEnable;				/* Protection Commands - Write enable: 06H*/
+} StrFlsCmdWriteEnable; /* Protection Commands - Write enable: 06H*/
 
 typedef struct
 {
 	U8 U8OperationCode;
-} StrFlsCmdWriteDisable;			/* Protection Commands - Write disable: 04H*/
-
-typedef struct
-{
-	U8 U8OperationCode;
-	U8 U8AddHigh;
-	U8 U8AddMid;
-	U8 U8AddLow;
-} StrFlsCmdProtectSector;			/* Protection Commands - Protect sector: 36H*/
+} StrFlsCmdWriteDisable; /* Protection Commands - Write disable: 04H*/
 
 typedef struct
 {
@@ -98,7 +54,7 @@ typedef struct
 	U8 U8AddHigh;
 	U8 U8AddMid;
 	U8 U8AddLow;
-} StrFlsCmdUnProtectSector;			/* UnProtection Commands - UnProtect sector: 39H*/
+} StrFlsCmdProtectSector; /* Protection Commands - Protect sector: 36H*/
 
 typedef struct
 {
@@ -106,16 +62,24 @@ typedef struct
 	U8 U8AddHigh;
 	U8 U8AddMid;
 	U8 U8AddLow;
-} StrFlsCmdBlockErase4KBytes;		/* Block erase Commands - Block erase: 20H*/
+} StrFlsCmdUnProtectSector; /* UnProtection Commands - UnProtect sector: 39H*/
 
 typedef struct
 {
 	U8 U8OperationCode;
-} StrFlsCmdReadStatusRegister;		/* Read status Commands - Read status: 05H*/
+	U8 U8AddHigh;
+	U8 U8AddMid;
+	U8 U8AddLow;
+} StrFlsCmdBlockErase4KBytes; /* Block erase Commands - Block erase: 20H*/
 
-/*****************************************************************************
- Macro definitions
- *****************************************************************************/
+typedef struct
+{
+	U8 U8OperationCode;
+} StrFlsCmdReadStatusRegister; /* Read status Commands - Read status: 05H*/
+
+/*
+ * Macro
+ */
 /* All flash commands (flash module - AT25DF161 ) */
 #define FLASH_CMD_READ_ARRAY_1						(U8)0x1B
 #define FLASH_CMD_READ_ARRAY_2						(U8)0x0B
@@ -172,35 +136,38 @@ typedef struct
 #define FLASH_SEG2_ACCESS_TYPE_WRITE				(U8)0x01	/* W type data segment */
 #define FLASH_SEG2_ACCESS_TYPE_READ					(U8)0x02	/* R type data segment */
 
-
 #define SEND_DUMMY_RECEIVE_DATA(U16Index)								\
 	Drv_CSI1_SendData(FLASH_COMM_SEG2_DUMMY);							\
 	while(DRV_CSI1_IS_RX_BUFFER_FULL() == CSI1_RX_BUFFER_NOT_FULL){};   \
 	pU8Data[U16Index] = Drv_CSI1_GetReceivesData()
 
+/*
+ * Imported global variables and functions (from other files)
+ */
 
-
-/*****************************************************************************
- Imported global variables and functions (from other files)
- *****************************************************************************/
-
-/*****************************************************************************
- Exported global variables and functions (to be accessed by other files)
- *****************************************************************************/
-extern BOOLEAN drv_Flash_ReadData(U32 U32FlsAddress, U16 U16DataLength, U8* pU8Data);
+/*
+ * Exported global variables and functions (to be accessed by other files)
+ */
+extern BOOLEAN drv_Flash_ReadData(U32 U32FlsAddress, U16 U16DataLength,
+		U8* pU8Data);
 extern BOOLEAN drv_Flash_Read32BytesData(U32 U32FlsAddress, U8* pU8Data);
 #if 0
 extern BOOLEAN drv_Flash_Read16BytesData(U32 U32FlsAddress, U8* pU8Data);
 extern BOOLEAN drv_Flash_Read48BytesData(U32 U32FlsAddress, U8* pU8Data);
 extern BOOLEAN drv_Flash_Read64BytesData(U32 U32FlsAddress, U8* pU8Data);
 #endif
-extern BOOLEAN drv_Flash_WriteData(U32 U32FlsAddress, U16 U16DataLength, const U8* pU8Data);
+extern BOOLEAN drv_Flash_WriteData(U32 U32FlsAddress, U16 U16DataLength,
+		const U8* pU8Data);
 extern BOOLEAN drv_Flash_WriteEnable(void);
 /* extern BOOLEAN drv_Flash_WriteDisable(void); */
 extern BOOLEAN drv_Flash_ProtectSector(U32 U32FlsAddress);
 extern BOOLEAN drv_Flash_UnProtectSector(U32 U32FlsAddress);
 extern BOOLEAN drv_Flash_BlockErase4KBytes(U32 U32FlsAddress);
 extern BOOLEAN drv_Flash_ReadStatusRegister(U8* pU8StatusByte);
+
+/*
+ * Private variables and functions
+ */
 
 #endif
 /* End of File */
