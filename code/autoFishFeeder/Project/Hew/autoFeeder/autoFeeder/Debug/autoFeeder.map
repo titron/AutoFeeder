@@ -11,7 +11,7 @@ c:\program files\renesas\hew_001\tools\renesas\nc30wa\v545r01\bin\ln30.exe @E:\G
 
 # LINK FILE INFORMATION
 draw_task (E:\GitRepository\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug\draw_task.r30)
-	Mar  6 15:22:53 2014
+	Mar  6 15:27:00 2014
 
 drv_clk (E:\GitRepository\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug\drv_clk.r30)
 	Mar  6 15:22:53 2014
@@ -146,40 +146,40 @@ data_NOI                         REL ROMDATA 0066CE 00000B       draw_task
                                  REL ROMDATA 0066DC 000015       if_oled_draw
                                  REL ROMDATA 0066F1 000000       initsct
                                  REL ROMDATA 0066F1 000001       main
-program                          REL CODE    0066F2 000555 2     draw_task
-                                 REL CODE    006C48 00005C 2     drv_clk
-                                 REL CODE    006CA4 00009A 2     drv_csi1
-                                 REL CODE    006D3E 00063F 2     drv_flash
-                                 REL CODE    00737E 000237 2     drv_iic
-                                 REL CODE    0075B6 000007 2     drv_int
-                                 REL CODE    0075BE 000014 2     drv_key
-                                 REL CODE    0075D2 000071 2     drv_led
-                                 REL CODE    007644 0008BA 2     drv_oled
-                                 REL CODE    007EFE 0000D5 2     drv_pwr
-                                 REL CODE    007FD4 0000C7 2     drv_tmr0
-                                 REL CODE    00809C 000064 2     drv_wdt
-                                 REL CODE    008100 000005 2     fvector
-                                 REL CODE    008106 00001F 2     if_disp
-                                 REL CODE    008126 000295 2     if_key
-                                 REL CODE    0083BC 0003AB 2     if_oled_draw
-                                 REL CODE    008768 000CE4 2     if_oled_text
-                                 REL CODE    00944C 0000B3 2     if_serial_flash
-                                 REL CODE    009500 000097 2     intprg
-                                 REL CODE    009598 0001D0 2     main
-                                 REL CODE    009768 00004D 2     _i4divu
-                                 REL CODE    0097B6 00001C 2     _i4mulu
-                                 REL CODE    0097D2 00002E 2     nmemcpy
-                                 REL CODE    009800 000029 2     nmemset
-                                 REL CODE    00982A 00001F 2     nstrcat
-                                 REL CODE    00984A 000020 2     _nstrcpy
-interrupt                        REL CODE    00986A 000065 2     initsct
-                                 REL CODE    0098D0 000037 2     resetprg
+program                          REL CODE    0066F2 00053B 2     draw_task
+                                 REL CODE    006C2E 00005C 2     drv_clk
+                                 REL CODE    006C8A 00009A 2     drv_csi1
+                                 REL CODE    006D24 00063F 2     drv_flash
+                                 REL CODE    007364 000237 2     drv_iic
+                                 REL CODE    00759C 000007 2     drv_int
+                                 REL CODE    0075A4 000014 2     drv_key
+                                 REL CODE    0075B8 000071 2     drv_led
+                                 REL CODE    00762A 0008BA 2     drv_oled
+                                 REL CODE    007EE4 0000D5 2     drv_pwr
+                                 REL CODE    007FBA 0000C7 2     drv_tmr0
+                                 REL CODE    008082 000064 2     drv_wdt
+                                 REL CODE    0080E6 000005 2     fvector
+                                 REL CODE    0080EC 00001F 2     if_disp
+                                 REL CODE    00810C 000295 2     if_key
+                                 REL CODE    0083A2 0003AB 2     if_oled_draw
+                                 REL CODE    00874E 000CE4 2     if_oled_text
+                                 REL CODE    009432 0000B3 2     if_serial_flash
+                                 REL CODE    0094E6 000097 2     intprg
+                                 REL CODE    00957E 0001D0 2     main
+                                 REL CODE    00974E 00004D 2     _i4divu
+                                 REL CODE    00979C 00001C 2     _i4mulu
+                                 REL CODE    0097B8 00002E 2     nmemcpy
+                                 REL CODE    0097E6 000029 2     nmemset
+                                 REL CODE    009810 00001F 2     nstrcat
+                                 REL CODE    009830 000020 2     _nstrcpy
+interrupt                        REL CODE    009850 000065 2     initsct
+                                 REL CODE    0098B6 000037 2     resetprg
 vector                           REL ROMDATA 00FEDC 000100       intprg
 fvector                          ABS ROMDATA 00FFDC 000024       fvector
 # Total -------------------------------------------------------------------
                                      DATA           0002E7(0000743) Byte(s)
                                      ROMDATA        002816(0010262) Byte(s)
-                                     CODE           003215(0012821) Byte(s)
+                                     CODE           0031FB(0012795) Byte(s)
 
 ##########################################
 # VARIABLE VECTOR TABLE INFORMATION      #
@@ -211,62 +211,62 @@ No.  Address               No.  Address               No.  Address
 ##########################################
 # (3) GLOBAL LABEL INFORMATION           #
 ##########################################
-$ConvertUTF8ToGB   0091f0  $ConvertUnicodeT   00939e  $DecToStr          0066f2
-$DecToStrSign      0068a2  $Draw_PlayTimePr   00867c  $GetDrawTextWidt   009170
-$OLED_DrawBmp      00854a  $OLED_DrawBox      00845c  $OLED_DrawLine     0083bc
-$OLED_DrawLineT    008424  $OLED_Draw_TextR   008e54  $OLED_TextA        008e18
-$OLED_TextA_16     00881e  $OLED_TextA_24     0089c4  $OLED_TextA_Rev    008c46
-$Strformat2        0069ea  $Strformat3        006a56  $_n_memset         009800
-$_n_n_memcpy       0097d2  $_n_n_strcat       00982a  $_n_n_strcpy       00984a
-$drv_CSI1_Init     006ca4  $drv_Flash_Read3   006dde  $drv_Flash_ReadD   006d3e
-$drv_Flash_ReadS   00721a  $drv_Flash_Write   00700c  $drv_I2C_MasterS   0073c4
-$drv_Led_SetStat   007604  $drv_OLED_Clear    007e2e  $drv_OLED_Comman   007644
-$drv_OLED_DataWr   007662  $drv_OLED_Graphi   007c02  $drv_OLED_Graphi   007a20
-$drv_OLED_Graphi   007ad4  $drv_OLED_Graphi   0078aa  $drv_OLED_Graphi   007966
-$drv_OLED_SetCol   007678  $drv_OLED_SetCom   00784a  $drv_OLED_SetCon   0077f0
-$drv_OLED_SetDis   00776c  $drv_OLED_SetDis   007780  $drv_OLED_SetDis   00782c
-$drv_OLED_SetDis   0076fe  $drv_OLED_SetDis   0076ea  $drv_OLED_SetDis   007724
-$drv_OLED_SetFun   007710  $drv_OLED_SetGPI   0077a0  $drv_OLED_SetGra   007860
-$drv_OLED_SetMas   007804  $drv_OLED_SetMul   007818  $drv_OLED_SetPar   00774a
-$drv_OLED_SetPha   007736  $drv_OLED_SetPre   0077b4  $drv_OLED_SetPre   0077c8
-$drv_OLED_SetRem   0076bc  $drv_OLED_SetRow   007692  $drv_OLED_SetSta   0076d6
-$drv_OLED_SetVCO   0077dc  $if_Disp_SetStar   008110  $if_Flash_Read32   009470
-$if_Flash_ReadDa   009456  $if_Flash_ReadSt   009488  $if_Flash_WriteD   0094b0
-$if_Key_GetState   00812a  $strcpy            00984a  $sysAdjustTime     009660
+$ConvertUTF8ToGB   0091d6  $ConvertUnicodeT   009384  $DecToStr          0066f2
+$DecToStrSign      0068a2  $Draw_PlayTimePr   008662  $GetDrawTextWidt   009156
+$OLED_DrawBmp      008530  $OLED_DrawBox      008442  $OLED_DrawLine     0083a2
+$OLED_DrawLineT    00840a  $OLED_Draw_TextR   008e3a  $OLED_TextA        008dfe
+$OLED_TextA_16     008804  $OLED_TextA_24     0089aa  $OLED_TextA_Rev    008c2c
+$Strformat2        0069ea  $Strformat3        006a56  $_n_memset         0097e6
+$_n_n_memcpy       0097b8  $_n_n_strcat       009810  $_n_n_strcpy       009830
+$drv_CSI1_Init     006c8a  $drv_Flash_Read3   006dc4  $drv_Flash_ReadD   006d24
+$drv_Flash_ReadS   007200  $drv_Flash_Write   006ff2  $drv_I2C_MasterS   0073aa
+$drv_Led_SetStat   0075ea  $drv_OLED_Clear    007e14  $drv_OLED_Comman   00762a
+$drv_OLED_DataWr   007648  $drv_OLED_Graphi   007be8  $drv_OLED_Graphi   007a06
+$drv_OLED_Graphi   007aba  $drv_OLED_Graphi   007890  $drv_OLED_Graphi   00794c
+$drv_OLED_SetCol   00765e  $drv_OLED_SetCom   007830  $drv_OLED_SetCon   0077d6
+$drv_OLED_SetDis   007752  $drv_OLED_SetDis   007766  $drv_OLED_SetDis   007812
+$drv_OLED_SetDis   0076e4  $drv_OLED_SetDis   0076d0  $drv_OLED_SetDis   00770a
+$drv_OLED_SetFun   0076f6  $drv_OLED_SetGPI   007786  $drv_OLED_SetGra   007846
+$drv_OLED_SetMas   0077ea  $drv_OLED_SetMul   0077fe  $drv_OLED_SetPar   007730
+$drv_OLED_SetPha   00771c  $drv_OLED_SetPre   00779a  $drv_OLED_SetPre   0077ae
+$drv_OLED_SetRem   0076a2  $drv_OLED_SetRow   007678  $drv_OLED_SetSta   0076bc
+$drv_OLED_SetVCO   0077c2  $if_Disp_SetStar   0080f6  $if_Flash_Read32   009456
+$if_Flash_ReadDa   00943c  $if_Flash_ReadSt   00946e  $if_Flash_WriteD   009496
+$if_Key_GetState   008110  $strcpy            009830  $sysAdjustTime     009646
 $updateTimerPain   006ae4  _App_Task_Disp     006b88  _BmpLogo           004400
 _CodeASCII         004840  _CodeASCII24       004e40  _CodeIco           006040
 _CurrentTimer      000402  _DispCurLine       0004e3  _DispName          0004be
 _DispState         000400  _DispWaitTM        00042c  _DrawBuf           00043e
-_TmrRAInt          008006  _U16CSI1BufCount   000430  _U16TimerCountPr   000408
-_U16TimerCountSc   000406  __ad_converter     00958c  __brk              009500
-__capture          009592  __compare0         009580  __compare1         00953a
-__dummy_int        008100  __i4divU           009768  __i4mulU           0097b6
-__input_key        00952a  __int0             009586  __int1             00956e
-__int2             009558  __int3             009574  __istack_top       0006e7
-__ssuic            009530  __stack_top        0005e7  __timer_ra         00955e
-__timer_rb         009568  __timer_rc         009506  __timer_rd0        00950c
-__timer_rd1        009512  __timer_re         009518  __timer_rf         00957a
-__uart0_receive    009546  __uart0_trance     009540  __uart1_receive    009552
-__uart1_trance     00954c  __uart2_receive    009524  __uart2_trance     00951e
-_clockBMP          004540  _drv_Clk_SelectH   006c6e  _drv_Clk_SelectL   006c48
-_drv_Flash_Block   0071b8  _drv_Flash_Prote   0070f4  _drv_Flash_UnPro   007156
-_drv_Flash_Write   0070c0  _drv_I2C_GetI2CB   0075a6  _drv_I2C_Init      00737e
-_drv_I2C_Int       007422  _drv_INT_Disable   0075b6  _drv_INT_Enable    0075ba
-_drv_Key_InitKey   0075be  _drv_Led_InitLed   0075d2  _drv_OLED_Init     007e70
-_drv_OLED_SetRea   0076b4  _drv_OLED_SetWri   0076ac  _drv_Power_TurnO   007fcc
-_drv_Pwr_12V_Tur   007f24  _drv_Pwr_12V_Tur   007f36  _drv_Pwr_3P3V_Tu   007f30
-_drv_Pwr_3P3V_Tu   007f42  _drv_Pwr_5V_Turn   007f2a  _drv_Pwr_5V_Turn   007f3c
-_drv_Pwr_InitPwr   007fbe  _drv_Pwr_InitPwr   007efe  _drv_Pwr_SetPort   007f48
-_drv_Tmr0_InitTm   007fd4  _drv_Tmr0_InitTm   007fee  _drv_WDT_InitWDT   00809c
-_drv_WDT_InitWDT   0080c8  _drv_Watchdog_Fe   0080f8  _exit              009902
-_fishBmp           004740  _if_Disp_Init      008106  _if_Flash_Erase4   009498
-_if_Flash_InitFl   00944c  _if_Flash_Protec   0094d0  _if_Flash_UnProt   0094e8
-_if_Key_ClearEve   0081ae  _if_Key_GetEvent   008126  _if_Key_Scan       0082ba
-_if_disp_clear     008542  _initMCU           009622  _initsct           00986a
-_main              009718  _pU8CSI1Buf        000432  _stSys             0004e1
-_start             0098d0  _sysKeyPro         0096fc  _sys_Feeding       0095de
-_sys_Init          009634  _sys_IsFeedCompl   00960e  _sys_IsFeedingTi   009598
-_sys_stopFeed      0095f6  _vsysFeedHour      000420  _vsysFeedMinute    000424
+_TmrRAInt          007fec  _U16CSI1BufCount   000430  _U16TimerCountPr   000408
+_U16TimerCountSc   000406  __ad_converter     009572  __brk              0094e6
+__capture          009578  __compare0         009566  __compare1         009520
+__dummy_int        0080e6  __i4divU           00974e  __i4mulU           00979c
+__input_key        009510  __int0             00956c  __int1             009554
+__int2             00953e  __int3             00955a  __istack_top       0006e7
+__ssuic            009516  __stack_top        0005e7  __timer_ra         009544
+__timer_rb         00954e  __timer_rc         0094ec  __timer_rd0        0094f2
+__timer_rd1        0094f8  __timer_re         0094fe  __timer_rf         009560
+__uart0_receive    00952c  __uart0_trance     009526  __uart1_receive    009538
+__uart1_trance     009532  __uart2_receive    00950a  __uart2_trance     009504
+_clockBMP          004540  _drv_Clk_SelectH   006c54  _drv_Clk_SelectL   006c2e
+_drv_Flash_Block   00719e  _drv_Flash_Prote   0070da  _drv_Flash_UnPro   00713c
+_drv_Flash_Write   0070a6  _drv_I2C_GetI2CB   00758c  _drv_I2C_Init      007364
+_drv_I2C_Int       007408  _drv_INT_Disable   00759c  _drv_INT_Enable    0075a0
+_drv_Key_InitKey   0075a4  _drv_Led_InitLed   0075b8  _drv_OLED_Init     007e56
+_drv_OLED_SetRea   00769a  _drv_OLED_SetWri   007692  _drv_Power_TurnO   007fb2
+_drv_Pwr_12V_Tur   007f0a  _drv_Pwr_12V_Tur   007f1c  _drv_Pwr_3P3V_Tu   007f16
+_drv_Pwr_3P3V_Tu   007f28  _drv_Pwr_5V_Turn   007f10  _drv_Pwr_5V_Turn   007f22
+_drv_Pwr_InitPwr   007fa4  _drv_Pwr_InitPwr   007ee4  _drv_Pwr_SetPort   007f2e
+_drv_Tmr0_InitTm   007fba  _drv_Tmr0_InitTm   007fd4  _drv_WDT_InitWDT   008082
+_drv_WDT_InitWDT   0080ae  _drv_Watchdog_Fe   0080de  _exit              0098e8
+_fishBmp           004740  _if_Disp_Init      0080ec  _if_Flash_Erase4   00947e
+_if_Flash_InitFl   009432  _if_Flash_Protec   0094b6  _if_Flash_UnProt   0094ce
+_if_Key_ClearEve   008194  _if_Key_GetEvent   00810c  _if_Key_Scan       0082a0
+_if_disp_clear     008528  _initMCU           009608  _initsct           009850
+_main              0096fe  _pU8CSI1Buf        000432  _stSys             0004e1
+_start             0098b6  _sysKeyPro         0096e2  _sys_Feeding       0095c4
+_sys_Init          00961a  _sys_IsFeedCompl   0095f4  _sys_IsFeedingTi   00957e
+_sys_stopFeed      0095dc  _vsysFeedHour      000420  _vsysFeedMinute    000424
 _vsysFeedSecond    000428  _vsysFeedTime      00041c  _vsysHour          00040c
 _vsysMilSecond     000418  _vsysMinute        000410  _vsysSecond        000414
 
@@ -415,9 +415,9 @@ data_NEI
 data_NOI
                                   000066ce  000066f1        24   1
 program
-                                  000066f2  00009869      3178   2
+                                  000066f2  0000984f      315e   2
 interrupt
-                                  0000986a  00009906        9d   2
+                                  00009850  000098ec        9d   2
 vector
                                   0000fedc  0000ffdb       100   1
 fvector
@@ -530,7 +530,7 @@ FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/interface/if_oled_te
 
 SECTION=program
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/app/draw/draw_task
-                                  000066f2  00006c46       555
+                                  000066f2  00006c2c       53b
   $DecToStr
                                   000066f2       1b0   func ,g         0
   $DecToStrSign
@@ -542,343 +542,343 @@ FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/app/draw/draw_task
   $updateTimerPaint
                                   00006ae4        a5   func ,g         0
   _App_Task_Disp
-                                  00006b88        bf   func ,g         0
+                                  00006b88        a5   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/drv_clk
-                                  00006c48  00006ca3        5c
+                                  00006c2e  00006c89        5c
   _drv_Clk_SelectLowSpeedOCO
-                                  00006c48        25   func ,g         0
+                                  00006c2e        25   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/drv_csi1
-                                  00006ca4  00006d3d        9a
+                                  00006c8a  00006d23        9a
   $drv_CSI1_Init
-                                  00006ca4        9a   func ,g         0
+                                  00006c8a        9a   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/drv_flash
-                                  00006d3e  0000737c       63f
+                                  00006d24  00007362       63f
   $drv_Flash_ReadData
-                                  00006d3e        9f   func ,g         0
+                                  00006d24        9f   func ,g         0
   $drv_Flash_Read32BytesData
-                                  00006dde       22e   func ,g         0
+                                  00006dc4       22e   func ,g         0
   $drv_Flash_WriteData
-                                  0000700c        b4   func ,g         0
+                                  00006ff2        b4   func ,g         0
   _drv_Flash_WriteEnable
-                                  000070c0        35   func ,g         0
+                                  000070a6        35   func ,g         0
   _drv_Flash_ProtectSector
-                                  000070f4        61   func ,g         0
+                                  000070da        61   func ,g         0
   _drv_Flash_UnProtectSector
-                                  00007156        62   func ,g         0
+                                  0000713c        62   func ,g         0
   _drv_Flash_BlockErase4KBytes
-                                  000071b8        62   func ,g         0
+                                  0000719e        62   func ,g         0
   $drv_Flash_ReadStatusRegister
-                                  0000721a        5b   func ,g         0
+                                  00007200        5b   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/drv_iic
-                                  0000737e  000075b4       237
+                                  00007364  0000759a       237
   _drv_I2C_Init
-                                  0000737e        46   func ,g         0
+                                  00007364        46   func ,g         0
   $drv_I2C_MasterSend
-                                  000073c4        5d   func ,g         0
+                                  000073aa        5d   func ,g         0
   _drv_I2C_Int
-                                  00007422       184   func ,g         0
+                                  00007408       184   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/drv_int
-                                  000075b6  000075bc         7
+                                  0000759c  000075a2         7
   _drv_INT_Disable
-                                  000075b6         3   func ,g         0
+                                  0000759c         3   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/drv_key
-                                  000075be  000075d1        14
+                                  000075a4  000075b7        14
   _drv_Key_InitKey
-                                  000075be        14   func ,g         0
+                                  000075a4        14   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/drv_led
-                                  000075d2  00007642        71
+                                  000075b8  00007628        71
   _drv_Led_InitLed
-                                  000075d2        31   func ,g         0
+                                  000075b8        31   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/drv_oled
-                                  00007644  00007efd       8ba
+                                  0000762a  00007ee3       8ba
   $drv_OLED_CommandWrite
-                                  00007644        1d   func ,g         0
+                                  0000762a        1d   func ,g         0
   $drv_OLED_DataWrite
-                                  00007662        16   func ,g         0
+                                  00007648        16   func ,g         0
   $drv_OLED_SetColumnAddress
-                                  00007678        1b   func ,g         0
+                                  0000765e        1b   func ,g         0
   $drv_OLED_SetRowAddress
-                                  00007692        1a   func ,g         0
+                                  00007678        1a   func ,g         0
   _drv_OLED_SetWriteRAM
-                                  000076ac         7   func ,g         0
+                                  00007692         7   func ,g         0
   _drv_OLED_SetReadRAM
-                                  000076b4         8   func ,g         0
+                                  0000769a         8   func ,g         0
   $drv_OLED_SetRemapFormat
-                                  000076bc        1b   func ,g         0
+                                  000076a2        1b   func ,g         0
   $drv_OLED_SetStartLine
-                                  000076d6        14   func ,g         0
+                                  000076bc        14   func ,g         0
   $drv_OLED_SetDisplayOffset
-                                  000076ea        14   func ,g         0
+                                  000076d0        14   func ,g         0
   $drv_OLED_SetDisplayMode
-                                  000076fe        11   func ,g         0
+                                  000076e4        11   func ,g         0
   $drv_OLED_SetFunctionSelection
-                                  00007710        15   func ,g         0
+                                  000076f6        15   func ,g         0
   $drv_OLED_SetDisplayOnOff
-                                  00007724        11   func ,g         0
+                                  0000770a        11   func ,g         0
   $drv_OLED_SetPhaseLength
-                                  00007736        15   func ,g         0
+                                  0000771c        15   func ,g         0
   $drv_OLED_SetPartialDisplay
-                                  0000774a        21   func ,g         0
+                                  00007730        21   func ,g         0
   $drv_OLED_SetDisplayClock
-                                  0000776c        15   func ,g         0
+                                  00007752        15   func ,g         0
   $drv_OLED_SetDisplayEnhancement_A
-                                  00007780        20   func ,g         0
+                                  00007766        20   func ,g         0
   $drv_OLED_SetGPIO
-                                  000077a0        14   func ,g         0
+                                  00007786        14   func ,g         0
   $drv_OLED_SetPrechargePeriod
-                                  000077b4        14   func ,g         0
+                                  0000779a        14   func ,g         0
   $drv_OLED_SetPrechargeVoltage
-                                  000077c8        14   func ,g         0
+                                  000077ae        14   func ,g         0
   $drv_OLED_SetVCOMH
-                                  000077dc        14   func ,g         0
+                                  000077c2        14   func ,g         0
   $drv_OLED_SetContrastCurrent
-                                  000077f0        14   func ,g         0
+                                  000077d6        14   func ,g         0
   $drv_OLED_SetMasterCurrent
-                                  00007804        14   func ,g         0
+                                  000077ea        14   func ,g         0
   $drv_OLED_SetMultiplexRatio
-                                  00007818        14   func ,g         0
+                                  000077fe        14   func ,g         0
   $drv_OLED_SetDisplayEnhancement_B
-                                  0000782c        1d   func ,g         0
+                                  00007812        1d   func ,g         0
   $drv_OLED_SetCommandLock
-                                  0000784a        17   func ,g         0
+                                  00007830        17   func ,g         0
   $drv_OLED_SetGrayScaleTable
-                                  00007860        4a   func ,g         0
+                                  00007846        4a   func ,g         0
   $drv_OLED_GraphicWrite
-                                  000078aa        bb   func ,g         0
+                                  00007890        bb   func ,g         0
   $drv_OLED_GraphicWrite_Offset
-                                  00007966        ba   func ,g         0
+                                  0000794c        ba   func ,g         0
   $drv_OLED_GraphicLineV
-                                  00007a20        b4   func ,g         0
+                                  00007a06        b4   func ,g         0
   $drv_OLED_GraphicLineVT
-                                  00007ad4       12f   func ,g         0
+                                  00007aba       12f   func ,g         0
   $drv_OLED_GraphicLineH
-                                  00007c02       1ef   func ,g         0
+                                  00007be8       1ef   func ,g         0
   $drv_OLED_Clear
-                                  00007e2e        41   func ,g         0
+                                  00007e14        41   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/drv_pwr
-                                  00007efe  00007fd2        d5
+                                  00007ee4  00007fb8        d5
   _drv_Pwr_InitPwrCtrlPort
-                                  00007efe        25   func ,g         0
+                                  00007ee4        25   func ,g         0
   _drv_Pwr_12V_TurnOff
-                                  00007f24         6   func ,g         0
+                                  00007f0a         6   func ,g         0
   _drv_Pwr_5V_TurnOff
-                                  00007f2a         6   func ,g         0
+                                  00007f10         6   func ,g         0
   _drv_Pwr_3P3V_TurnOff
-                                  00007f30         6   func ,g         0
+                                  00007f16         6   func ,g         0
   _drv_Pwr_12V_TurnOn
-                                  00007f36         6   func ,g         0
+                                  00007f1c         6   func ,g         0
   _drv_Pwr_5V_TurnOn
-                                  00007f3c         6   func ,g         0
+                                  00007f22         6   func ,g         0
   _drv_Pwr_3P3V_TurnOn
-                                  00007f42         6   func ,g         0
+                                  00007f28         6   func ,g         0
   _drv_Pwr_SetPortForLowPower
-                                  00007f48        76   func ,g         0
+                                  00007f2e        76   func ,g         0
   _drv_Pwr_InitPwrCtrl
-                                  00007fbe         e   func ,g         0
+                                  00007fa4         e   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/drv_tmr0
-                                  00007fd4  0000809a        c7
+                                  00007fba  00008080        c7
   _drv_Tmr0_InitTmr0InHighSpeed
-                                  00007fd4        19   func ,g         0
+                                  00007fba        19   func ,g         0
   _drv_Tmr0_InitTmr0InLowSpeed
-                                  00007fee        19   func ,g         0
+                                  00007fd4        19   func ,g         0
   _TmrRAInt
-                                  00008006        95   func ,g         0
+                                  00007fec        95   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/drv_wdt
-                                  0000809c  000080ff        64
+                                  00008082  000080e5        64
   _drv_WDT_InitWDTInHighSpeedOCO
-                                  0000809c        2b   func ,g         0
+                                  00008082        2b   func ,g         0
   _drv_WDT_InitWDTInLowSpeedOCO
-                                  000080c8        30   func ,g         0
+                                  000080ae        30   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/fvector
-                                  00008100  00008104         5
+                                  000080e6  000080ea         5
   __dummy_int
-                                  00008100         5   func ,g         0
+                                  000080e6         5   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/interface/if_disp
-                                  00008106  00008124        1f
+                                  000080ec  0000810a        1f
   _if_Disp_Init
-                                  00008106         9   func ,g         0
+                                  000080ec         9   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/interface/if_key
-                                  00008126  000083ba       295
+                                  0000810c  000083a0       295
   _if_Key_GetEvent
-                                  00008126         4   func ,g         0
+                                  0000810c         4   func ,g         0
   $if_Key_GetState
-                                  0000812a        83   func ,g         0
+                                  00008110        83   func ,g         0
   _if_Key_ClearEvent
-                                  000081ae         5   func ,g         0
+                                  00008194         5   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/interface/if_oled_draw
-                                  000083bc  00008766       3ab
+                                  000083a2  0000874c       3ab
   $OLED_DrawLine
-                                  000083bc        67   func ,g         0
+                                  000083a2        67   func ,g         0
   $OLED_DrawLineT
-                                  00008424        39   func ,g         0
+                                  0000840a        39   func ,g         0
   $OLED_DrawBox
-                                  0000845c        e5   func ,g         0
+                                  00008442        e5   func ,g         0
   _if_disp_clear
-                                  00008542         8   func ,g         0
+                                  00008528         8   func ,g         0
   $OLED_DrawBmp
-                                  0000854a       132   func ,g         0
+                                  00008530       132   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/interface/if_oled_text
-                                  00008768  0000944b       ce4
+                                  0000874e  00009431       ce4
   $OLED_TextA_16
-                                  0000881e       1a6   func ,g         0
+                                  00008804       1a6   func ,g         0
   $OLED_TextA_24
-                                  000089c4       282   func ,g         0
+                                  000089aa       282   func ,g         0
   $OLED_TextA_Rev
-                                  00008c46       1d3   func ,g         0
+                                  00008c2c       1d3   func ,g         0
   $OLED_TextA
-                                  00008e18        3b   func ,g         0
+                                  00008dfe        3b   func ,g         0
   $OLED_Draw_TextRoll24
-                                  00008e54       31d   func ,g         0
+                                  00008e3a       31d   func ,g         0
   $GetDrawTextWidthA
-                                  00009170        7f   func ,g         0
+                                  00009156        7f   func ,g         0
   $ConvertUTF8ToGBCode
-                                  000091f0       1af   func ,g         0
+                                  000091d6       1af   func ,g         0
   $ConvertUnicodeToGBCode
-                                  0000939e        ae   func ,g         0
+                                  00009384        ae   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/interface/if_serial_flash
-                                  0000944c  000094fe        b3
+                                  00009432  000094e4        b3
   _if_Flash_InitFlashComm
-                                  0000944c         9   func ,g         0
+                                  00009432         9   func ,g         0
   $if_Flash_ReadData
-                                  00009456        1b   func ,g         0
+                                  0000943c        1b   func ,g         0
   $if_Flash_Read32BytesData
-                                  00009470        17   func ,g         0
+                                  00009456        17   func ,g         0
   $if_Flash_ReadStatusRegister
-                                  00009488        10   func ,g         0
+                                  0000946e        10   func ,g         0
   _if_Flash_Erase4KBytesBlock
-                                  00009498        18   func ,g         0
+                                  0000947e        18   func ,g         0
   $if_Flash_WriteData
-                                  000094b0        21   func ,g         0
+                                  00009496        21   func ,g         0
   _if_Flash_ProtectSector
-                                  000094d0        17   func ,g         0
+                                  000094b6        17   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/intprg
-                                  00009500  00009596        97
+                                  000094e6  0000957c        97
   __brk
-                                  00009500         5   func ,g         0
+                                  000094e6         5   func ,g         0
   __timer_rc
-                                  00009506         6   func ,g         0
+                                  000094ec         6   func ,g         0
   __timer_rd0
-                                  0000950c         6   func ,g         0
+                                  000094f2         6   func ,g         0
   __timer_rd1
-                                  00009512         6   func ,g         0
+                                  000094f8         6   func ,g         0
   __timer_re
-                                  00009518         6   func ,g         0
+                                  000094fe         6   func ,g         0
   __uart2_trance
-                                  0000951e         6   func ,g         0
+                                  00009504         6   func ,g         0
   __uart2_receive
-                                  00009524         6   func ,g         0
+                                  0000950a         6   func ,g         0
   __input_key
-                                  0000952a         6   func ,g         0
+                                  00009510         6   func ,g         0
   __ssuic
-                                  00009530         a   func ,g         0
+                                  00009516         a   func ,g         0
   __compare1
-                                  0000953a         6   func ,g         0
+                                  00009520         6   func ,g         0
   __uart0_trance
-                                  00009540         6   func ,g         0
+                                  00009526         6   func ,g         0
   __uart0_receive
-                                  00009546         6   func ,g         0
+                                  0000952c         6   func ,g         0
   __uart1_trance
-                                  0000954c         6   func ,g         0
+                                  00009532         6   func ,g         0
   __uart1_receive
-                                  00009552         6   func ,g         0
+                                  00009538         6   func ,g         0
   __int2
-                                  00009558         6   func ,g         0
+                                  0000953e         6   func ,g         0
   __timer_ra
-                                  0000955e         a   func ,g         0
+                                  00009544         a   func ,g         0
   __timer_rb
-                                  00009568         6   func ,g         0
+                                  0000954e         6   func ,g         0
   __int1
-                                  0000956e         6   func ,g         0
+                                  00009554         6   func ,g         0
   __int3
-                                  00009574         6   func ,g         0
+                                  0000955a         6   func ,g         0
   __timer_rf
-                                  0000957a         6   func ,g         0
+                                  00009560         6   func ,g         0
   __compare0
-                                  00009580         6   func ,g         0
+                                  00009566         6   func ,g         0
   __int0
-                                  00009586         6   func ,g         0
+                                  0000956c         6   func ,g         0
   __ad_converter
-                                  0000958c         6   func ,g         0
+                                  00009572         6   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/app/main
-                                  00009598  00009767       1d0
+                                  0000957e  0000974d       1d0
   _sys_IsFeedingTime
-                                  00009598        45   func ,g         0
+                                  0000957e        45   func ,g         0
   _sys_Feeding
-                                  000095de        19   func ,g         0
+                                  000095c4        19   func ,g         0
   _sys_stopFeed
-                                  000095f6        18   func ,g         0
+                                  000095dc        18   func ,g         0
   _sys_IsFeedComplete
-                                  0000960e        13   func ,g         0
+                                  000095f4        13   func ,g         0
   _initMCU
-                                  00009622        12   func ,g         0
+                                  00009608        12   func ,g         0
   _sys_Init
-                                  00009634        2d   func ,g         0
+                                  0000961a        2d   func ,g         0
   $sysAdjustTime
-                                  00009660        9c   func ,g         0
+                                  00009646        9c   func ,g         0
   _sysKeyPro
-                                  000096fc        1b   func ,g         0
+                                  000096e2        1b   func ,g         0
 
 FILE=_i4divu
-                                  00009768  000097b4        4d
+                                  0000974e  0000979a        4d
   __i4divU
-                                  00009768        4d   func ,g         0
+                                  0000974e        4d   func ,g         0
 
 FILE=_i4mulu
-                                  000097b6  000097d1        1c
+                                  0000979c  000097b7        1c
   __i4mulU
-                                  000097b6        1c   func ,g         0
+                                  0000979c        1c   func ,g         0
 
 FILE=nmemcpy
-                                  000097d2  000097ff        2e
+                                  000097b8  000097e5        2e
   $_n_n_memcpy
-                                  000097d2        2e   func ,g         0
+                                  000097b8        2e   func ,g         0
 
 FILE=nmemset
-                                  00009800  00009828        29
+                                  000097e6  0000980e        29
   $_n_memset
-                                  00009800        29   func ,g         0
+                                  000097e6        29   func ,g         0
 
 FILE=nstrcat
-                                  0000982a  00009848        1f
+                                  00009810  0000982e        1f
   $_n_n_strcat
-                                  0000982a        1f   func ,g         0
+                                  00009810        1f   func ,g         0
 
 FILE=_nstrcpy
-                                  0000984a  00009869        20
+                                  00009830  0000984f        20
   $_n_n_strcpy
-                                  0000984a         0   func ,g         0
+                                  00009830         0   func ,g         0
   $strcpy
-                                  0000984a         0   func ,g         0
+                                  00009830         0   func ,g         0
 
 SECTION=interrupt
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/initsct
-                                  0000986a  000098ce        65
+                                  00009850  000098b4        65
   _initsct
-                                  0000986a        65   func ,g         0
+                                  00009850        65   func ,g         0
 
 FILE=E:/GitRepository/AutoFeeder/code/autoFishFeeder/source/drv/resetprg
-                                  000098d0  00009906        37
+                                  000098b6  000098ec        37
   _start
-                                  000098d0        32   func ,g         0
+                                  000098b6        32   func ,g         0
   _exit
-                                  00009902         5   func ,g         0
+                                  000098e8         5   func ,g         0
 
