@@ -50,12 +50,6 @@
 #define FISH_BMP_POS_X 					0
 #define FISH_BMP_POS_Y 					30
 
-#define SEPRATE_LIN_X               	155
-#define SEPRATE_LINE_START_X        	SEPRATE_LIN_X
-#define SEPRATE_LINE_START_Y        	17
-#define SEPRATE_LINE_END_X        		SEPRATE_LIN_X
-#define SEPRATE_LINE_END_Y        		64
-
 /*
  * Imported global variables and functions (from other files)
  */
@@ -267,10 +261,6 @@ void App_Task_Disp(void)
 			BOTTOM_LINE_BOX_FILL_GRAY);
 			updateTimerPaint(REDRAW);
 			OLED_DrawBmp(FISH_BMP_POS_X, FISH_BMP_POS_Y, BMP_FISH_NO);
-			OLED_DrawLine(SEPRATE_LINE_START_X,
-			SEPRATE_LINE_START_Y,
-			SEPRATE_LINE_END_X, SEPRATE_LINE_END_Y, 0x01);
-			/*switch to play mode*/
 			DispState = DISP_PLAY;
 		}
 		break;
