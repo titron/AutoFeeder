@@ -1,0 +1,59 @@
+eeschema (2013-07-07 BZR 4022)-stable  >> Creation date: 20/05/2014 09:26:58
+
+#Cmp ( order = Value )
+| 0.1u         C1        
+| 0.1u         C2        
+| 0.1u         C3        
+| 0.1u         C5        
+| 0.1u         C9        
+| 0.1u         C10       
+| 0.1u         C13       
+| 4.7uF        C6        
+| 4.7uF        C12       
+| 10u          C7        
+| 10u          C11       
+| 47u          C4        
+| 47u          C8        
+| BARREL_JACK  CON1      
+| Green        D1        
+| Blue         D2        
+| Red          D3        
+| Yellow       D4        
+| IN4148       D5        
+| IN4148       D6        
+| 12V          D7        
+| IN4148       D8        
+| JUMPER       JP1       
+| JUMPER       JP2       
+| JUMPER       JP3       
+| CONN_2       P5        
+| CONN_30_OLED P4        
+| CONN_9X2     P1        
+| CONN_9X2     P3        
+| CONN_7X2     P2        
+| IRLML6402TR  Q1        
+| IRLML6402    Q2        
+| IRLML6402    Q3        
+| 50R          R7        
+| 1K           R3        
+| 1K           R4        
+| 1K           R5        
+| 1K           R6        
+| 4.7K         R1        
+| 4.7K         R2        
+| 47K          R9        
+| 47K          R10       
+| 47K          R11       
+| 1.2M         R8        
+| SW_PUSH      SW1       
+| SW_PUSH      SW2       
+| SW_PUSH      SW3       
+| SW_PUSH      SW4       
+| SW_PUSH      SW5       
+| SPST         SW6       
+| UPC2905AT    U2        
+| UPC2933AT    U3        
+| R5F212A8     U1        
+#End Cmp
+
+#End List
