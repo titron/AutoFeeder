@@ -1,6 +1,0 @@
----- App_Host_KeyRotaryEventHandler Matches (5 in 1 files) ----
-App_host.c (f:\diy\autofishfeeder\source\system):static void App_Host_KeyRotaryEventHandler(U8 U8KeyEvent, S8 S8Rotary1Event, 
-App_host.c (f:\diy\autofishfeeder\source\system):		App_Host_KeyRotaryEventHandler(U8KeyEvent, S8Rotary1Event, S8Rotary2Event);
-App_host.c (f:\diy\autofishfeeder\source\system): * Outline           : App_Host_KeyRotaryEventHandler
-App_host.c (f:\diy\autofishfeeder\source\system): * Declaration       : void App_Host_KeyRotaryEventHandler(void)
-App_host.c (f:\diy\autofishfeeder\source\system):void App_Host_KeyRotaryEventHandler(U8 U8KeyEvent, S8 S8Rotary1Event, 

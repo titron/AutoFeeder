@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete 8 resources" deleteContents="false" description="Delete 8 resources" element1="/autoFishFeeder/source/app/draw/disp_msg.c" element2="/autoFishFeeder/source/app/draw/disp_msg.h" element3="/autoFishFeeder/source/app/draw/disp_widget.c" element4="/autoFishFeeder/source/app/draw/disp_widget.h" element5="/autoFishFeeder/source/app/draw/draw_play.c" element6="/autoFishFeeder/source/app/draw/draw_play.h" element7="/autoFishFeeder/source/app/draw/draw_set.c" element8="/autoFishFeeder/source/app/draw/draw_test.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="8" stamp="1394002351371"/>
-</session>
