@@ -1,9 +1,9 @@
--I"E:\GitRepository\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\app"
--I"E:\GitRepository\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\drv"
--I"E:\GitRepository\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\interface"
--I"E:\GitRepository\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\app\draw"
+-I"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\app"
+-I"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\drv"
+-I"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\interface"
+-I"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\app\draw"
 -c
 -finfo
--dir "E:\GitRepository\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug"
+-dir "D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug"
 -R8C
-"E:\GitRepository\AutoFeeder\code\autoFishFeeder\source\drv\drv_csi1.c"
+"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\source\drv\drv_csi1.c"

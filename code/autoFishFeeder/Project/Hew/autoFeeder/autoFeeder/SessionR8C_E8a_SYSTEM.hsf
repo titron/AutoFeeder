@@ -126,7 +126,7 @@
 0 
 [WINDOW_POSITION_STATE_DATA_VD1]
 "{WK_00000001_CmdLine}" "WINDOW" 59422 0 1 "0.25" 309 0 0 350 200 17 0 "32771|32772|32778|<<separator>>|32773|32774|<<separator>>|32820|<<separator>>|32801|32824" "0.0" 
-"{WK_00000001_DISASSEMBLY}" "WINDOW" 0 0 0 "0.00" 0 0 0 1019 283 10 0 "" "0.0" 
+"{WK_00000001_DISASSEMBLY}" "WINDOW" 0 0 0 "0.00" 0 -8 -31 1019 283 10 0 "" "0.0" 
 "{WK_00000001_OUTPUT}" "WINDOW" 59422 0 0 "1.00" 309 456 243 350 200 18 0 "36756|36757|36758|36759|<<separator>>|36746|36747|<<separator>>|39531|<<separator>>|39500|39534|<<separator>>|36687" "0.0" 
 "{WK_00000002_WORKSPACE}" "WINDOW" 59420 0 0 "1.00" 331 456 243 350 200 18 0 "" "0.0" 
 "{WK_TB00000001_STANDARD}" "TOOLBAR 0" 59419 0 2 "0.00" 0 0 0 0 0 18 0 "" "0.0" 
@@ -151,15 +151,7 @@
 [WINDOW_POSITION_STATE_DATA_VD3]
 [WINDOW_POSITION_STATE_DATA_VD4]
 [WINDOW_Z_ORDER]
-"E:\GitRepository\AutoFeeder\code\autoFishFeeder\source\drv\drv_oled.c" 
-"E:\GitRepository\AutoFeeder\code\autoFishFeeder\source\drv\resetprg.c" 
-"E:\GitRepository\AutoFeeder\code\autoFishFeeder\source\interface\if_oled_text.c" 
-"E:\GitRepository\AutoFeeder\code\autoFishFeeder\source\app\draw\draw_task.c" 
-"E:\GitRepository\AutoFeeder\code\autoFishFeeder\source\interface\if_disp.c" 
-"E:\GitRepository\AutoFeeder\code\autoFishFeeder\source\app\draw\draw_task.h" 
-"E:\GitRepository\AutoFeeder\code\autoFishFeeder\source\app\main.h" 
-"E:\GitRepository\AutoFeeder\code\autoFishFeeder\source\app\main.c" 
-"C:\Windows\system32\Disassembly" 
+"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\Disassembly" 
 [TARGET_NAME]
 "R8C E8a SYSTEM" "" 0 
 [STATUSBAR_STATEINFO_VD1]
