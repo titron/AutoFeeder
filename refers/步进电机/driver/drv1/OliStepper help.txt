@@ -1,0 +1,84 @@
+OliStepper.h V 1.1
+
+Library for controlling
+28BYJ-48 stepper motorS
+with a ULN2003APG driver
+Created by Olivier Friker, September 04, 2016.
+released into the public domain, for the best and the worst.
+Using multiple motors is possible (tested with 2).
+
+______________________________________________
+* Mandatory functions *
+
+  Olistepper stepper1 (pin1, pin2, pin3, pin4, SPR)
+	this creates an instance of the motor
+	this line must be placed before the setup()
+	define tha actual control pins you connected the driver to
+	SPR is the number of steps per revolution (default 512)
+
+  oliRun ()
+	just put this function in your main loop()
+
+______________________________________________
+* available funtcions *
+
+  setRPM(rpm)
+	sets the speed in revolution per minute (default is 14)
+	experimente what your motor can stand 
+
+  setDirection(direction)
+	use "CW" (which is default) or "CCW" to change direction
+	use "STOP" to... well... stop the motor
+
+  setAngle (angle)
+	will move the motor once by the defined angle
+	don't use negative numbers - to change the direction, use setDirection()
+	set the angle to 0 to cancel this function
+
+  setSteps (nbsteps)
+	will move the motor once by the defined number of steps
+	don't use negative numbers - to change the direction, use setDirection()
+	set the number of stepsto 0 to cancel this function
+
+  returnToOrigin ()
+	will move the motor in opposite direction
+	will stop the motor as soon as it reached the origin (or the zero position)
+	the origin is the position when the program initialized unless it's been reset with setOrigin()
+
+  rewindFully ()
+	will move the motor in opposite direction
+	will fully rezind the motor to the origin (or the zero position), which could mean multiple turns
+	the origin is the position when the program initialized unless it's been reset with setOrigin()
+
+  setOrigin()
+	sets the origin at the current position
+
+
+______________________________________________
+* Example *
+
+here's an example that starts both motors, one CW, one CCW, and stop only one after some time
+
+---------------------------------------------------------
+#include <OliStepper.h>
+
+unsigned long deb;
+OliStepper moteur1(8, 9, 10, 11, 512);
+OliStepper moteur2(4, 5, 6, 7, 512);
+
+void setup() {
+  moteur1.setDirection ("CW");
+  moteur1.setDirection ("CCW");
+  deb = millis();
+}
+
+
+void loop() {
+  unsigned long duree = millis()- deb;
+  if (duree > 5000) {
+    moteur1.setDirection ("STOP");
+  }
+moteur1.oliRun ();
+moteur2.oliRun ();
+}
+

@@ -1,0 +1,92 @@
+/* 
+STM32
+Stepping morter 28BYJ-48 + Driver ULN2003  
+from 
+https://ht-deko.com/arduino/stepper_motor.html
+*/
+
+int pin_IN[4] = {5,18,23,19};
+
+/*
+ * 
+ IN1 5
+ IN2 18
+ IN3 23
+ IN4 19
+*/
+
+const int NBSTEPS = 4096;
+const int STEPTIME = 2500;
+int Step = 0;
+boolean Clockwise = true;
+
+int arrayDefault[4] = {LOW, LOW, LOW, LOW};
+
+int stepsMatrix[8][4] = {
+    {LOW, LOW, LOW, HIGH},  
+    {LOW, LOW, HIGH, HIGH}, 
+    {LOW, LOW, HIGH, LOW},
+    {LOW, HIGH, HIGH, LOW}, 
+    {LOW, HIGH, LOW, LOW}, 
+    {HIGH, HIGH, LOW, LOW},
+    {HIGH, LOW, LOW, LOW},  
+    {HIGH, LOW, LOW, HIGH},
+};
+
+unsigned long lastTime;
+unsigned long time;
+
+void setup() {
+  Serial.begin(115200);
+  Serial.println("Starting...");
+  pinMode(pin_IN[0], OUTPUT);
+  pinMode(pin_IN[1], OUTPUT);
+  pinMode(pin_IN[2], OUTPUT);
+  pinMode(pin_IN[3], OUTPUT);
+}
+
+void loop() {
+  unsigned long currentMicros;
+  int stepsLeft = NBSTEPS;
+  time = 0;
+  while (stepsLeft > 0) {
+    currentMicros = micros();
+    if (currentMicros - lastTime >= STEPTIME) {
+      stepper();
+      time += micros() - lastTime;
+      lastTime = micros();
+//      Serial.println(stepsLeft);
+      stepsLeft--;
+    }
+  }
+  Serial.println(time);
+  Serial.println("Wait...!");
+  delay(2000);
+  Clockwise = !Clockwise;
+  stepsLeft = NBSTEPS;
+}
+
+void writeStep(int outArray[4]) {
+  for (int i = 0; i < 4; i++) {
+    digitalWrite(pin_IN[i], outArray[i]);
+  }
+}
+
+void stepper() {
+  if ((Step >= 0) && (Step < 8)) {
+    writeStep(stepsMatrix[Step]);
+  } else {
+    writeStep(arrayDefault);
+  }
+  setDirection();
+}
+
+void setDirection() {
+  (Clockwise) ? (Step++) : (Step--);
+
+  if (Step > 7) {
+    Step = 0;
+  } else if (Step < 0) {
+    Step = 7;
+  }
+}
