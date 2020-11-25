@@ -1,0 +1,9 @@
+-I"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\app"
+-I"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\drv"
+-I"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\interface"
+-I"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\app\draw"
+-c
+-finfo
+-dir "D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug"
+-R8C
+"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\source\drv\drv_Stepper.c"
