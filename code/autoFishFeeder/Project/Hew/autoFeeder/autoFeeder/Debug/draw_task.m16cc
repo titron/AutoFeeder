@@ -1,9 +1,9 @@
--I"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\app"
--I"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\drv"
--I"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\interface"
--I"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\app\draw"
+-I"E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\app"
+-I"E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\drv"
+-I"E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\interface"
+-I"E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\..\..\..\..\source\app\draw"
 -c
 -finfo
--dir "D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug"
+-dir "E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\Project\Hew\autoFeeder\autoFeeder\Debug"
 -R8C
-"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\source\app\draw\draw_task.c"
+"E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\app\draw\draw_task.c"

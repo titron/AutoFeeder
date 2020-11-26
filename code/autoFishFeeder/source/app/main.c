@@ -211,12 +211,13 @@ void main(void)
 		{
 		case SYS_INIT:
 			sys_Init();
+			//drv_stepper_moveDegreesCW(90);
 			stSys = SYS_NORMAL;
 			break;
 		case SYS_NORMAL:
 			if (TRUE == sys_IsFeedingTime())
 			{
-				drv_stepper_moveDegreesCW(90);
+				//drv_stepper_moveDegreesCW(90);
 
 				sys_Feeding();
 				stSys = SYS_FEEDING;

@@ -55,11 +55,11 @@ void drv_stepper_init(void)
   pin_dir[2] = PORT_DIR_STEPPER_C;
   pin_dir[3] = PORT_DIR_STEPPER_D;
 
-  for(phase_index = 0;phase_index<4;phase_index++)
-  {
-    pins[phase_index] = (U8)STEPPER_OUT_HIGH;
-    pin_dir[phase_index] = PORT_MODE_OUTPUT;/* direction is output */
-  }
+  //for(phase_index = 0;phase_index<4;phase_index++)
+  //{
+  //  pins[phase_index] = (U8)STEPPER_OUT_HIGH;
+  //  pin_dir[phase_index] = PORT_MODE_OUTPUT;/* direction is output */
+  //}
 }
 
 void drv_stepper_setRpm(int rpm)
