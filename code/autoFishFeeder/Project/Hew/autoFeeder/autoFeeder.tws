@@ -8,8 +8,12 @@
 [BREAKPOINTS]
 [OPEN_WORKSPACE_FILES]
 "D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\source\app\main.c" 
+"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\source\drv\drv_Stepper.c" 
+"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\source\drv\drv_Stepper.h" 
 [WORKSPACE_FILE_STATES]
-"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\source\app\main.c" -8 -31 1019 283 1 1 
+"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\source\app\main.c" 0 0 1019 283 0 1 
+"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\source\drv\drv_Stepper.c" -8 -31 1019 283 1 2 
+"D:\MyFiles\DIYprojects\self\AutoFeeder\AutoFeeder\code\autoFishFeeder\source\drv\drv_Stepper.h" 78 78 925 166 0 3 
 [LOADED_PROJECTS]
 "autoFeeder" 
 [END]

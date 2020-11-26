@@ -9,15 +9,7 @@
 /*
  * Includes
  */
-#include "../drv/basictype.h"
-#include "../drv/drv_clk.h"
-#include "../drv/drv_int.h"
-#include "../drv/drv_led.h"
-#include "../drv/drv_pwr.h"
-#include "../drv/drv_tmr0.h"
-#include "../drv/drv_wdt.h"
-#include "../interface/if_key.h"
-#include "draw/draw_task.h"
+#include "main.h"
 
 /*
  * Typedef
@@ -142,6 +134,7 @@ void sys_Init(void)
 	drv_INT_Enable();
 	drv_Power_TurnOn();
 	drv_Led_SetState(LED_POWER, LED_ON);
+	drv_stepper_init();
 }
 
 /*
@@ -223,6 +216,8 @@ void main(void)
 		case SYS_NORMAL:
 			if (TRUE == sys_IsFeedingTime())
 			{
+				drv_stepper_moveDegreesCW(90);
+
 				sys_Feeding();
 				stSys = SYS_FEEDING;
 			}
