@@ -38,7 +38,8 @@
 
 /* led */
 #define LED_POWER	LED1		/* On-Power on , Off-Power off */
-#define LED_HEART   LED2		/* Heart beat every 1 second */
+#define LED_HEART    LED2		/* Heart beat every 1 second */
+#define LED_O2          LED3		/* Adding O2 led */
 
 /*
  * Imported global variables and functions (from other files)

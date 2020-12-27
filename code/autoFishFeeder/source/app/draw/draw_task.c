@@ -43,6 +43,8 @@
 #define CURRENT_TIME_POS_Y              (U16)0
 #define FEED_TIME_POS_X		            (U16)80
 #define FEED_TIME_POS_Y		            (U16)32
+#define O2_TIME_POS_X		            (U16)208
+#define O2_TIME_POS_Y		            (U16)32
 
 #define FISH_BMP_POS_X 					0
 #define FISH_BMP_POS_Y 					30
@@ -56,6 +58,9 @@ extern u32 vsysSecond;
 extern u32 vsysFeedHour;
 extern u32 vsysFeedMinute;
 extern u32 vsysFeedSecond;
+extern u32 vsysO2Hour;
+extern u32 vsysO2Minute;
+extern u32 vsysO2Second;
 
 /*
  * Exported global variables and functions (to be accessed by other files)
@@ -225,6 +230,13 @@ void updateTimerPaint(U8 mode)
 	memset(buf, 0, sizeof(buf));
 	Strformat3(buf, hour, minute, second, ":", (U8) 2);
 	OLED_TextA(buf, FEED_TIME_POS_X, FEED_TIME_POS_Y, FONT16);
+	/*draw O2 time*/
+	hour = (U16) vsysO2Hour;
+	minute = (U16) vsysO2Minute;
+	second = (U16) vsysO2Second;
+	memset(buf, 0, sizeof(buf));
+	Strformat3(buf, hour, minute, second, ":", (U8) 2);
+	OLED_TextA(buf, O2_TIME_POS_X, O2_TIME_POS_Y, FONT16);
 }
 
 /*

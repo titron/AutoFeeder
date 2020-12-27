@@ -24,13 +24,19 @@
 #define SYS_SLEEP 					(SYS_FEEDING + 1)
 
 #define SYS_FEED_TIME_IN_MS     	5
-#define SYS_DEFAULT_TIME_HOUR   	0x14
+/* system time */
+#define SYS_DEFAULT_TIME_HOUR   	0x08
 #define SYS_DEFAULT_TIME_MINUTE 	0x00
 #define SYS_DEFAULT_TIME_SECOND 	0x00
+/* feed time */
 #define SYS_FEED_TIME_HOUR   		0x08
-#define SYS_FEED_TIME_MINUTE 		0x00
+#define SYS_FEED_TIME_MINUTE 		0x01
 #define SYS_FEED_TIME_SECOND 		0x00
 #define SYS_FEED_TIME_MILCOND		(1000-SYS_FEED_TIME_IN_MS)
+/* O2 time */
+#define SYS_O2_TIME_HOUR   		0x08
+#define SYS_O2_TIME_MINUTE 		0x10
+#define SYS_O2_TIME_SECOND 		0x00
 
 /*
  * Imported global variables and functions (from other files)
@@ -42,11 +48,17 @@
 u32 vsysHour = SYS_DEFAULT_TIME_HOUR;
 u32 vsysMinute = SYS_DEFAULT_TIME_MINUTE;
 u32 vsysSecond = SYS_DEFAULT_TIME_SECOND;
+
 u32 vsysMilSecond = 0;
 u32 vsysFeedTime = 0;
+
 u32 vsysFeedHour = SYS_FEED_TIME_HOUR;
 u32 vsysFeedMinute = SYS_FEED_TIME_MINUTE;
 u32 vsysFeedSecond = SYS_FEED_TIME_SECOND;
+
+u32 vsysO2Hour = SYS_O2_TIME_HOUR;
+u32 vsysO2Minute = SYS_O2_TIME_MINUTE;
+u32 vsysO2Second = SYS_O2_TIME_SECOND;
 
 /*
  * Private variables and functions
@@ -72,6 +84,24 @@ u8 sys_IsFeedingTime(void)
 }
 
 /*
+ * sys_IsO2Time
+ *
+ */
+u8 sys_IsO2Time(void)
+{
+	if ((vsysO2Hour == vsysHour) && (vsysO2Minute == vsysMinute)
+			&& (vsysO2Second == vsysSecond)
+			&& (SYS_FEED_TIME_MILCOND < vsysMilSecond))
+	{
+		return TRUE ;
+	}
+	else
+	{
+		return FALSE ;
+	}
+}
+
+/*
  * sys_Feeding
  * start feeding.
  */
@@ -79,7 +109,20 @@ void sys_Feeding(void)
 {
 	vsysFeedTime = 0;
 	drv_Led_SetState(LED_HEART, LED_ON);
-	drv_Pwr_5V_TurnOn();
+	// drv_Pwr_5V_TurnOn();
+	drv_stepper_moveDegreesCW(360);// 1st round
+	drv_stepper_moveDegreesCW(360);// 2nd round
+}
+
+/*
+ * sys_AddingO2
+ * start adding O2.
+ */
+void sys_AddingO2(void)
+{
+	vsysFeedTime = 0;
+	drv_Led_SetState(LED_O2, LED_ON);
+	// drv_Pwr_5V_TurnOn();
 }
 
 /*
@@ -89,7 +132,17 @@ void sys_stopFeed(void)
 {
 	vsysFeedTime = 0;
 	drv_Led_SetState(LED_HEART, LED_OFF);
-	drv_Pwr_5V_TurnOff();
+	// Feeding complete now
+}
+
+/*
+ * sys_stopO2
+ */
+void sys_stopO2(void)
+{
+	vsysFeedTime = 0;
+	drv_Led_SetState(LED_O2, LED_OFF);
+	//O2 complete now
 }
 
 /*
@@ -211,7 +264,7 @@ void main(void)
 		{
 		case SYS_INIT:
 			sys_Init();
-			//drv_stepper_moveDegreesCW(90);
+			drv_stepper_moveDegreesCW(90);
 			stSys = SYS_NORMAL;
 			break;
 		case SYS_NORMAL:
@@ -220,16 +273,25 @@ void main(void)
 				//drv_stepper_moveDegreesCW(90);
 
 				sys_Feeding();
-				stSys = SYS_FEEDING;
-			}
-			break;
-		case SYS_FEEDING:
-			if (TRUE == sys_IsFeedComplete())
-			{
 				sys_stopFeed();
 				stSys = SYS_NORMAL;
 			}
+			if (TRUE == sys_IsO2Time())
+			{
+				//drv_stepper_moveDegreesCW(90);
+
+				sys_AddingO2();
+				sys_stopO2();
+				stSys = SYS_NORMAL;
+			}
 			break;
+		// case SYS_FEEDING:
+		// 	if (TRUE == sys_IsFeedComplete())
+		// 	{
+		// 		sys_stopFeed();
+		// 		stSys = SYS_NORMAL;
+		// 	}
+		// 	break;
 		case SYS_SLEEP:
 			stSys = SYS_NORMAL;
 			break;

@@ -25,6 +25,8 @@
 /*
  * Macro
  */
+//#define DEBUG_STEP 
+ 
 #define PORT_STEPPER_A			p1_0
 #define PORT_STEPPER_B			p1_1
 #define PORT_STEPPER_C			p1_2
@@ -94,7 +96,7 @@ void drv_stepper_stepCCW (void);
 int drv_stepper_getStep(void);
 int drv_stepper_getDelay(void);
 int drv_stepper_getRpm(void);
-int drv_stepper_getPin(int p);
+// struct	bit_def drv_stepper_getPin(int p);
 int drv_stepper_getStepsLeft(void);
 
 #endif

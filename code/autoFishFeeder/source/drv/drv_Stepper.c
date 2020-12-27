@@ -20,12 +20,12 @@ static int drv_stepper_calcRpm(int _delay); // calcs rpm for given delay in micr
 static void drv_stepper_seqCW(void);
 static void drv_stepper_seqCCW(void);
 static void drv_stepper_seq(int seqNum); // send specific sequence num to driver
-static void drv_stepper_digitalWrite(int stepperPin, int pattern);
+static void drv_stepper_digitalWrite(int pinNum, int pattern);
 static void drv_stepper_delayMicroseconds(int delay);
 
 /*** private variables ***/
-static int pins[4];   // defaults to pins {8,9,10,11} (in1,in2,in3,in4 on the driver board)
-static int pin_dir[4];   // defaults to pins {8,9,10,11} (in1,in2,in3,in4 on the driver board)
+//static int pins[4];   // defaults to pins {8,9,10,11} (in1,in2,in3,in4 on the driver board)
+//static int pin_dir[4];   // defaults to pins {8,9,10,11} (in1,in2,in3,in4 on the driver board)
 
 static int stepN = 0; // keeps track of step position
                       // 0-4095 (4096 mini-steps / revolution) or maybe 4076...
@@ -42,24 +42,52 @@ static int stepsLeft = 0;          // steps left to move, neg for counter-clockw
 /*****************************************************/
 /* public functions */
 /*****************************************************/
+#ifdef DEBUG_STEP
+static void delay_debug(void)
+{
+	int i = 100;
+	
+	do
+	{
+		i--;
+	}while(i > 0);
+}
+#endif
+
 void drv_stepper_init(void)
 {
   int phase_index;
 
-  pins[0] = PORT_STEPPER_A;
-  pins[1] = PORT_STEPPER_B;
-  pins[2] = PORT_STEPPER_C;
-  pins[3] = PORT_STEPPER_D;
-  pin_dir[0] = PORT_DIR_STEPPER_A;
-  pin_dir[1] = PORT_DIR_STEPPER_B;
-  pin_dir[2] = PORT_DIR_STEPPER_C;
-  pin_dir[3] = PORT_DIR_STEPPER_D;
 
-  //for(phase_index = 0;phase_index<4;phase_index++)
-  //{
-  //  pins[phase_index] = (U8)STEPPER_OUT_HIGH;
-  //  pin_dir[phase_index] = PORT_MODE_OUTPUT;/* direction is output */
-  //}
+  PORT_STEPPER_A = (U8)STEPPER_OUT_HIGH;
+  PORT_DIR_STEPPER_A = PORT_MODE_OUTPUT;/* direction is output */
+  PORT_STEPPER_B = (U8)STEPPER_OUT_HIGH;
+  PORT_DIR_STEPPER_B = PORT_MODE_OUTPUT;/* direction is output */
+  PORT_STEPPER_C = (U8)STEPPER_OUT_HIGH;
+  PORT_DIR_STEPPER_C = PORT_MODE_OUTPUT;/* direction is output */
+  PORT_STEPPER_D = (U8)STEPPER_OUT_HIGH;
+  PORT_DIR_STEPPER_D = PORT_MODE_OUTPUT;/* direction is output */
+  
+
+#ifdef DEBUG_STEP
+  while(1)
+  {
+	  PORT_STEPPER_A = STEPPER_OUT_HIGH;
+	  PORT_STEPPER_B = STEPPER_OUT_HIGH;
+	  PORT_STEPPER_C = STEPPER_OUT_HIGH;
+	  PORT_STEPPER_D = STEPPER_OUT_HIGH;
+	  
+	  delay_debug();
+	  
+	  PORT_STEPPER_A = STEPPER_OUT_LOW;
+	  PORT_STEPPER_B = STEPPER_OUT_LOW;
+	  PORT_STEPPER_C = STEPPER_OUT_LOW;
+	  PORT_STEPPER_D = STEPPER_OUT_LOW;
+	  
+	  delay_debug();
+  }
+  /*** Debug port for step --- end ***/
+#endif  
 }
 
 void drv_stepper_setRpm(int rpm)
@@ -236,12 +264,21 @@ int drv_stepper_getRpm(void)
   return drv_stepper_calcRpm(delay);
 } // returns current rpm
 
-int drv_stepper_getPin(int p)
-{
-  if (p < 4)
-    return pins[p]; // returns pin #
-  return 0;         // default 0
-}
+// struct	bit_def  drv_stepper_getPin(int p)
+// {
+//   switch(p){
+//   case 0:
+//     return PORT_STEPPER_A; // returns pin #
+//   case 1:
+//     return PORT_STEPPER_B; // returns pin #
+//   case 2:
+//     return PORT_STEPPER_C; // returns pin #
+//   case 3:
+//     return PORT_STEPPER_D; // returns pin #
+//   default:
+//     return -1;
+//   }
+// }
 
 int drv_stepper_getStepsLeft(void)
 {
@@ -345,7 +382,7 @@ void drv_stepper_off(void)
   int p;
 
   for (p = 0; p < 4; p++)
-    drv_stepper_digitalWrite(pins[p], 0);
+    drv_stepper_digitalWrite(p, 0);
 }
 
 /*****************************************************/
@@ -402,9 +439,25 @@ static void drv_stepper_seqCCW(void)
   }
 }
 
-static void drv_stepper_digitalWrite(int stepperPin, int pattern)
+static void drv_stepper_digitalWrite(int pinNum, int pattern)
 {
-  stepperPin = pattern;
+  switch(pinNum){
+  case 0:
+    PORT_STEPPER_A = pattern;
+    break;
+  case 1:
+    PORT_STEPPER_B = pattern;
+    break;
+  case 2:
+    PORT_STEPPER_C = pattern;
+    break;
+  case 3:
+    PORT_STEPPER_D = pattern;
+    break;
+  default:
+    /*nothing to do*/
+    break;
+  }  
 }
 
 /*
@@ -503,7 +556,7 @@ static void drv_stepper_seq(int seqNum)
   // write pattern to pins
   for (p = 0; p < 4; p++)
   {
-    drv_stepper_digitalWrite(pins[p], pattern[p]);
+    drv_stepper_digitalWrite(p, pattern[p]);
   }
   drv_stepper_delayMicroseconds(delay);
 }

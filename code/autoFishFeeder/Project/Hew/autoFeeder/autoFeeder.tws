@@ -11,13 +11,15 @@
 "E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\app\main.c" 
 "E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\drv\drv_oled.c" 
 "E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\drv\drv_Stepper.c" 
+"E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\drv\drv_Stepper.h" 
 "E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\drv\resetprg.c" 
 [WORKSPACE_FILE_STATES]
 "E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\app\draw\draw_task.c" 25 25 928 170 0 5 
 "E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\app\main.c" 25 25 928 170 0 1 
-"E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\drv\drv_Stepper.c" 75 75 928 170 0 3 
-"E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\drv\drv_oled.c" -8 -30 1019 283 1 4 
-"E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\drv\resetprg.c" 50 50 928 170 0 2 
+"E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\drv\drv_Stepper.c" 0 0 1019 347 0 3 
+"E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\drv\drv_Stepper.h" 0 0 878 269 0 6 
+"E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\drv\drv_oled.c" -8 -30 1019 347 1 4 
+"E:\dev\projects\self\AutoFeeder\code\autoFishFeeder\source\drv\resetprg.c" 0 0 1253 755 0 2 
 [LOADED_PROJECTS]
 "autoFeeder" 
 [END]
