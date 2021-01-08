@@ -10,7 +10,7 @@
  * Includes
  */
 #include "main.h"
-
+#include "drv_o2.h"
 /*
  * Typedef
  */
@@ -35,8 +35,9 @@
 #define SYS_FEED_TIME_MILCOND		(1000-SYS_FEED_TIME_IN_MS)
 /* O2 time */
 #define SYS_O2_TIME_HOUR   		0x08
-#define SYS_O2_TIME_MINUTE 		0x10
+#define SYS_O2_TIME_MINUTE 		0x02
 #define SYS_O2_TIME_SECOND 		0x00
+#define SYS_O2_TIME_DURATION_IN_HOUR		0x08
 
 /*
  * Imported global variables and functions (from other files)
@@ -59,6 +60,8 @@ u32 vsysFeedSecond = SYS_FEED_TIME_SECOND;
 u32 vsysO2Hour = SYS_O2_TIME_HOUR;
 u32 vsysO2Minute = SYS_O2_TIME_MINUTE;
 u32 vsysO2Second = SYS_O2_TIME_SECOND;
+
+u32 vsysO2Hour_Duration = SYS_O2_TIME_HOUR+SYS_O2_TIME_DURATION_IN_HOUR;
 
 /*
  * Private variables and functions
@@ -101,6 +104,19 @@ u8 sys_IsO2Time(void)
 	}
 }
 
+u8 sys_IsO2TimeEnd(void)
+{
+	if ((vsysO2Hour_Duration == vsysHour)&& 
+		(SYS_FEED_TIME_MILCOND < vsysMilSecond))
+	{
+		return TRUE ;
+	}
+	else
+	{
+		return FALSE ;
+	}
+}
+
 /*
  * sys_Feeding
  * start feeding.
@@ -114,16 +130,7 @@ void sys_Feeding(void)
 	drv_stepper_moveDegreesCW(360);// 2nd round
 }
 
-/*
- * sys_AddingO2
- * start adding O2.
- */
-void sys_AddingO2(void)
-{
-	vsysFeedTime = 0;
-	drv_Led_SetState(LED_O2, LED_ON);
-	// drv_Pwr_5V_TurnOn();
-}
+
 
 /*
  * sys_stopFeed
@@ -133,16 +140,6 @@ void sys_stopFeed(void)
 	vsysFeedTime = 0;
 	drv_Led_SetState(LED_HEART, LED_OFF);
 	// Feeding complete now
-}
-
-/*
- * sys_stopO2
- */
-void sys_stopO2(void)
-{
-	vsysFeedTime = 0;
-	drv_Led_SetState(LED_O2, LED_OFF);
-	//O2 complete now
 }
 
 /*
@@ -188,6 +185,7 @@ void sys_Init(void)
 	drv_Power_TurnOn();
 	drv_Led_SetState(LED_POWER, LED_ON);
 	drv_stepper_init();
+	drv_O2_init();
 }
 
 /*
@@ -281,6 +279,12 @@ void main(void)
 				//drv_stepper_moveDegreesCW(90);
 
 				sys_AddingO2();
+				stSys = SYS_NORMAL;
+			}
+			if (TRUE == sys_IsO2TimeEnd())
+			{
+				//drv_stepper_moveDegreesCW(90);
+
 				sys_stopO2();
 				stSys = SYS_NORMAL;
 			}
